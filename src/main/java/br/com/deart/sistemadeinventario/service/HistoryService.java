@@ -48,7 +48,7 @@ public class HistoryService {
         return repository.searchByLocation(location);
     }
 
-    public List<History> searchHistoryByResponsable(User user){
-        return repository.searchByResponsable(user);
+    public List<History> searchHistoryByResponsible(User user){
+        return repository.searchByResponsible(user);
     }
 }

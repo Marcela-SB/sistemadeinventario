@@ -32,6 +32,6 @@ public class User {
     private String name;
     private String password;
 
-    @OneToMany(mappedBy = "responsable", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "responsible")
     private List<History> histories;
 }

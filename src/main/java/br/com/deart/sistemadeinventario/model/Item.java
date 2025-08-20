@@ -30,11 +30,11 @@ public class Item {
     @OneToOne(mappedBy = "item", cascade = CascadeType.ALL, orphanRemoval = true)
     private Note note;
 
-
-    public Item(ItemRequest request){
-        this.tombo = request.getTombo();
-        this.name = request.getName();
-        this.description = request.getDescription();
+    public Item(UUID id, String tombo, String name, String description){
+        this.id = id;
+        this.tombo = tombo;
+        this.name = name;
+        this.description = description;
     }
 
     public Item(String tombo, String name, String description){

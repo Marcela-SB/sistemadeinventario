@@ -17,7 +17,7 @@ import br.com.deart.sistemadeinventario.model.Item;
 
 @Repository
 public interface HistoryRepository extends JpaRepository<History, UUID>{
-    public List<History> searchByResponsable(User responsable);
+    public List<History> searchByResponsible(User responsible);
     public List<History> searchByDestination(String destination);
     public List<History> searchByOrigin(String origin);
     public List<History> searchByDateTime(LocalDateTime dateTime);
