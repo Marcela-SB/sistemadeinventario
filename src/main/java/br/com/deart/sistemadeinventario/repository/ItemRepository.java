@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface ItemRepository extends JpaRepository<Item, UUID>{
+    public boolean existsByTombo(String tombo);
     public List<Item> searchByTombo(String tombo);
     public List<Item> searchByName(String name);
 }

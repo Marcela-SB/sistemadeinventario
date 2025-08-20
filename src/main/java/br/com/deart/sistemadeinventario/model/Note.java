@@ -29,4 +29,10 @@ public class Note {
     private Item item;
 
     private String text;
+
+
+    public Note(Item item, String text){
+        this.item = item;
+        this.text = text;
+    }
 }
