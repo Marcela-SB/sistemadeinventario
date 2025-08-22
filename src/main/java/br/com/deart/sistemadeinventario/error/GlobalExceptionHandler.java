@@ -14,12 +14,22 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(ItemAlreadyExistsException.class)
-    public ResponseEntity<String> handlerAlreadyExists(ItemNotFoundException ex){
+    public ResponseEntity<String> handlerItemAlreadyExists(ItemNotFoundException ex){
         return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage());
     }
 
     @ExceptionHandler(ItemNotFoundException.class)
     public ResponseEntity<String> handlerItemNotFound(ItemNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(NoteAlreadyExistsException.class)
+    public ResponseEntity<String> handlerNoteAlreadyExists(NoteNotFoundException ex){
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(NoteNotFoundException.class)
+    public ResponseEntity<String> handlerNoteNotFound(NoteNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 }
